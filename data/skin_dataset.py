@@ -24,7 +24,7 @@ class SkinDataset(ConfounderDataset):
         self.model_type = model_type
         print(confounder_names)
         # Read in attributes
-        self.attrs_df = pd.read_csv('/artifact_based_generalization_isic22/isic_inferred_wocarcinoma.csv')
+        self.attrs_df = pd.read_csv('/artifact-generalization-skin/isic_inferred_wocarcinoma.csv')
         self.data = pd.read_csv(self.root_csv)
         self.attrs_df = self.attrs_df[self.attrs_df['image'].isin(self.data['image'])]
 

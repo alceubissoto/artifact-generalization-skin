@@ -274,10 +274,10 @@ def train(model, criterion, dataset,
 
     # Test for Skin
     if args.dataset == 'Skin':
-        test_ds_atlas_clin = CSVDataset('/datasets/abissoto/edraAtlas', '/datasets/abissoto/edraAtlas/atlas-clinical-all.csv', 'image', 'label', transform=get_transform_skin(False), add_extension='.jpg')
-        test_ds_atlas_derm = CSVDataset('/datasets/abissoto/edraAtlas', '/datasets/abissoto/edraAtlas/atlas-dermato-all.csv', 'image', 'label',transform=get_transform_skin(False), add_extension='.jpg')
-        test_ds_ph2 = CSVDataset('/datasets/abissoto/ph2images/', '/datasets/abissoto/ph2images/ph2.csv', 'image', 'label',transform=get_transform_skin(False), add_extension='.jpg')
-        test_ds_padufes = CSVDataset('/datasets/abissoto/pad-ufes/', '/datasets/abissoto/pad-ufes/padufes-test-wocarc.csv', 'img_id', 'label',transform=get_transform_skin(False), add_extension=None)
+        test_ds_atlas_clin = CSVDataset('/artifact-generalization-skin/datasets/edraAtlas', '/artifact-generalization-skin/datasets/edraAtlas/atlas-clinical-all.csv', 'image', 'label', transform=get_transform_skin(False), add_extension='.jpg')
+        test_ds_atlas_derm = CSVDataset('/artifact-generalization-skin/datasets/edraAtlas', '/artifact-generalization-skin/datasets/edraAtlas/atlas-dermato-all.csv', 'image', 'label',transform=get_transform_skin(False), add_extension='.jpg')
+        test_ds_ph2 = CSVDataset('/artifact-generalization-skin/datasets/ph2images/', '/artifact-generalization-skin/datasets/ph2images/ph2.csv', 'image', 'label',transform=get_transform_skin(False), add_extension='.jpg')
+        test_ds_padufes = CSVDataset('/artifact-generalization-skin/datasets/pad-ufes/', '/artifact-generalization-skin/datasets/pad-ufes/padufes-test-wocarc.csv', 'img_id', 'label',transform=get_transform_skin(False), add_extension=None)
 
         shuffle = False
         data_sampler = None

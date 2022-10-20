@@ -48,7 +48,7 @@ telegram_file = 'telegram.json'
 if os.path.isfile(telegram_file):
     telegram_obs = TelegramObserver.from_config(telegram_file)
     ex.observers.append(telegram_obs)
-fs_observer = FileStorageObserver.create('results-comet')
+fs_observer = FileStorageObserver.create('results')
 
 
 def save_images(dataset, to, n=32):
@@ -117,7 +117,7 @@ def config():
 def main(cfg):
 
     args = DictX(cfg)
-    #wandb.init(name=args.exp_name, project='groupDRO_positionenvs', entity='alceubissoto', save_code=True)
+    #wandb.init(name=args.exp_name, project='your_project', entity='your_user', save_code=True)
     wandb.init(mode='disabled')
     args.generalization_adjustment = str(args.generalization_adjustment)
 
